@@ -21,6 +21,13 @@ export type Book = {
   summary: string
 }
 
+export type characters = {
+  id: number,
+  name: string,
+  image: string,
+  description: string
+}
+
 export default function App() {
    
   return (
@@ -36,7 +43,12 @@ export default function App() {
         </Routes> 
       
 
-     
+     <footer>
+       <small>
+         FE Final Project 2025
+        
+       </small>
+     </footer>
   
     </div>
   )

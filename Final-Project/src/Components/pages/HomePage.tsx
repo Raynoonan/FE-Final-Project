@@ -23,11 +23,16 @@ function HomePage() {
   setCartItems(prev => [...prev, book])
   
  }
+
+const deleteItem = (book: Book) => {
+    setCartItems(prev => prev.filter(b => b.id !== book.id))
+  }
+
   return (
 
      <div className="homepage">
       <h2 style={{textAlign: "center"}}>Buy Books!</h2>
-      <Cart items={cartItems}  />
+      <Cart items={cartItems} deleteItem={deleteItem} />
       <div style={{ display: 'flex', gap: '4rem', flexWrap: 'wrap' }}>
         {books.map(book => (
           <BookCard key={book.id} book={book} addToCart={addToCart} />

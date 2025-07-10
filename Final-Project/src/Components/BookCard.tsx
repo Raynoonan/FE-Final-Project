@@ -9,7 +9,7 @@ function BookCard({book, addToCart} : Props) {
   return (
 
     // iterate all ten books so each have a card
-    <div className="card" style={{ width: '15rem'}}>
+    <div className="card" style={{ width: '15rem', marginBottom: '2em'}}>
       <img src={book.coverImage} alt="Book cover"  />
       <div className="card-body">
         <h5>{book.bookTitle}</h5>
