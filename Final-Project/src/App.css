@@ -2,6 +2,7 @@
 body{
    background-color: rgb(185, 185, 185);
    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   position: relative;
 }
 
 button{
@@ -41,5 +42,47 @@ footer {
    text-align: center;
    padding: 7px;
    background-color: rgb(40, 40, 40);
-   color:aliceblue
+   color:aliceblue;
+   width: 100%;
+   position: absolute;
+}
+
+form {
+   text-align: center;
+}
+
+input[type=text] {
+  margin: 5px;
+ 
+}
+.star-rating{
+ font-size:xx-large;
+ display: flex;
+ flex-direction: row-reverse;
+ justify-content: center
+
+}
+.star-rating input{
+   display:none;
+
+ 
+}
+
+.stars label {
+ cursor: pointer;
+ color:rgb(69, 69, 69)
+}
+.star-rating input:not(:checked) ~ label:hover,
+.star-rating input:not(:checked) ~ label:hover ~ label {
+  color: goldenrod; /* Color on hover */
+}
+
+/* Coloring selected stars */
+.star-rating input[type="radio"]:checked ~ label {
+  color: gold; /* Color for selected stars */
+}
+
+/* Additional styling for active state */
+.star-rating label:active {
+  color: darkgoldenrod !important;
 }

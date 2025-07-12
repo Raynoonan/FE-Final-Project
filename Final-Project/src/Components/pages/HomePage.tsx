@@ -1,6 +1,5 @@
 import Cart from "../Cart.tsx"
 import BookCard from "../BookCard.tsx"
-import Summaries from "../Summaries.tsx"
 import type { Book } from "../../App.tsx"
 import { useEffect, useState } from "react"
 
@@ -38,7 +37,7 @@ const deleteItem = (book: Book) => {
           <BookCard key={book.id} book={book} addToCart={addToCart} />
         ))}
       </div>
-      <Summaries />
+
     </div>
   );
 }
