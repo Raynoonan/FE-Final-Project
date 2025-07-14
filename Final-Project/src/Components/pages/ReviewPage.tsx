@@ -13,7 +13,15 @@ type Review ={
 }
 function ReviewPage() {
   const [stars, setStars] = useState<number>(0)
-  const [reviews, setReviews] = useState<Review[]>([])
+  const [reviews, setReviews] = useState<Review[]>([
+    {
+      id: 1, 
+      name: 'Ray',
+      book: 'Fourth Wing',
+      review: 'Really exciting, fast paced plot.',
+      stars: 4
+    }
+  ])
 
 const handleReviewSubmit = (data: Omit<Review, 'id'>) => {
   const newReview: Review = {
